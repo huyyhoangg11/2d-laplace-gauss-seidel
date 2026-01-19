@@ -1,1 +1,59 @@
-# 2d-laplace-gauss-seidel
+# Nghiên cứu phương pháp Gauss-Seidel giải phương trình Laplace 2D
+(Research on Gauss-Seidel method for solving 2D Laplace equation in viscous flow)
+
+## 🏫 Thông tin chung
+* [cite_start]**Trường:** Đại học Bách Khoa Hà Nội - Trường CNTT & TT [cite: 1, 2]
+* [cite_start]**Môn học:** Tính toán khoa học (Scientific Computing) [cite: 5]
+* **Giảng viên hướng dẫn:** TS. [cite_start]Vũ Văn Thiệu [cite: 9, 10]
+* [cite_start]**Học kỳ:** 2025.1 (Tháng 1/2026) [cite: 17]
+
+## 👥 Nhóm thực hiện
+| STT | Họ và tên | MSSV |
+|:---:|:---|:---:|
+| 1 | Đinh Việt Hoàng | 202416917 |
+| 2 | Nguyễn Huy Hoàng | 202416921 |
+| 3 | Nguyễn Đình Hùng | 202416925 |
+| 4 | Nguyễn Việt Hưng | 202416933 |
+| 5 | Phùng Nam Khánh | 202416949 |
+| 6 | Nguyễn Tài Kiên | 202416957 |
+
+[cite_start]*[Trích xuất từ báo cáo trang 1]* [cite: 11-16]
+
+## 📄 Giới thiệu đề tài
+Dự án nghiên cứu và cài đặt phương pháp lặp **Gauss-Seidel** kết hợp với phương pháp **Sai phân hữu hạn (Finite Difference Method - FDM)** để giải phương trình Laplace hai chiều $(\nabla^2 \phi = 0)$.
+
+Ứng dụng cụ thể:
+1.  [cite_start]**Bài toán kiểm chứng:** Giải phương trình Laplace trên miền hình chữ nhật đơn giản với điều kiện biên Dirichlet[cite: 321].
+2.  [cite_start]**Bài toán ứng dụng:** Mô phỏng dòng chảy nhớt trong kênh dẫn có tiết diện hình chữ C (C-section channel)[cite: 162].
+
+## 📊 Kết quả mô phỏng
+Chương trình được viết bằng Python, sử dụng thư viện `numpy` để tính toán ma trận và `matplotlib` để trực quan hóa dữ liệu (Contour plot & 3D Surface plot).
+
+* **Phương pháp:** Gauss-Seidel Iteration.
+* [cite_start]**Điều kiện dừng:** Sai số hội tụ $\epsilon < 10^{-4}$[cite: 419].
+* [cite_start]**Kết quả:** Thuật toán hội tụ sau khoảng 828 bước lặp (đối với lưới 31x31)[cite: 461].
+
+*(Bạn có thể chèn ảnh chụp màn hình kết quả chạy code vào đây)*
+
+## 🛠️ Cài đặt và Chạy chương trình
+
+### Yêu cầu hệ thống
+* Python 3.x
+* Các thư viện: `numpy`, `matplotlib`
+
+### Cài đặt thư viện
+```bash
+pip install numpy matplotlib
+```
+
+### Chạy mô phỏng
+Để chạy bài toán kiểm chứng trên miền hình chữ nhật:
+```bash
+python laplace_rect_solver.py
+```
+
+## 📂 Cấu trúc thư mục
+* `laplace_rect_solver.py`: Mã nguồn giải bài toán trên miền hình chữ nhật (Code Demo).
+* `Report_GaussSeidel_Laplace.pdf`: Báo cáo chi tiết bao gồm cơ sở lý thuyết và phân tích sai số.
+
+---
